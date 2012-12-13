@@ -1,4 +1,11 @@
-%h1 Listing movies
+%h1 Moviews
+
+- if signed_in?
+  .lead
+    Hi
+    = self.current_user.name
+    !
+    What kind of movies do you like?
 
 %table
   %tr
@@ -20,4 +27,9 @@
 
 %br
 
-= link_to 'New Movie', new_movie_path
+- if signed_in?
+  = link_to 'New Movie', new_movie_path
+- else
+  .lead
+    if you signed in Moviewfun, you can create movie and movie's review =>
+    = link_to "Sign In", "/auth/twitter"

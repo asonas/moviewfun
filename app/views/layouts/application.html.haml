@@ -22,11 +22,7 @@
       .navbar-inner
         .container
           %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
           %a.brand(href="#") Moviewfun
-
     .container
 
       .row
@@ -37,10 +33,10 @@
           .well.sidebar-nav
             %h3 Sidebar
             %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              - if signed_in?
+                %li= link_to "Sign Out", sign_out_path, :method => :delete
+              - else
+                %li= link_to "Sign In", "/auth/twitter"
 
       %footer
         %p &copy; Company 2012
