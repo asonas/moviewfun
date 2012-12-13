@@ -19,7 +19,7 @@
   - @movies.each do |movie|
     %tr
       %td= movie.user.name
-      %td= movie.title
+      %td= link_to movie.title, movie.url
       %td= movie.description
       %td= link_to 'Show', movie
       %td= link_to 'Edit', edit_movie_path(movie)
