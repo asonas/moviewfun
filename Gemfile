@@ -10,9 +10,12 @@ gem 'twitter-bootstrap-rails'
 gem 'omniauth-twitter'
 gem 'omniauth'
 gem 'awesome_print'
+gem 'less-rails'
+gem 'therubyracer'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails'
 end
 
 group :production do
