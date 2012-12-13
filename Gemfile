@@ -12,6 +12,7 @@ gem 'omniauth'
 gem 'awesome_print'
 gem 'less-rails'
 gem 'therubyracer'
+gem 'libv8', '~> 3.11.8'
 
 group :development, :test do
   gem 'sqlite3'
