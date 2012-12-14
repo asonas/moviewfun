@@ -5,6 +5,8 @@ Moviewfun::Application.routes.draw do
   delete "/sessions", :to => "sessions#destroy", :as => "sign_out"
   match "/auth/:provider/callback", :to => "sessions#create"
 
+  resources :users, only: [:show]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
