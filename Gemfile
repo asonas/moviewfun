@@ -19,6 +19,10 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
+group :development do
+  gem 'sextant'
+end
+
 group :production do
   gem 'pg'
 end
