@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 	# GET /user/1.json
 	def show
 		@user = User.find(params[:id])
+		@movies = Movie.find(:all, :conditions => {:user_id => params[:id]})
 
 		respond_to do |format|
 			format.html #show.html.erb

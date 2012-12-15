@@ -10,6 +10,22 @@
   %b Created at:
   = @user.created_at
 
+%table.table.table-striped
+  %tr
+    %th Title
+    %th Description
+    %th
+    %th
+    %th
+
+  - @movies.each do |movie|
+    %tr
+      %td= link_to movie.title, movie.url
+      %td= movie.description
+      %td= link_to 'Show', movie
+      %td= link_to 'Edit', edit_movie_path(movie)
+      %td= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }
+
 = link_to 'Edit'
 \|
 = link_to 'Back'
