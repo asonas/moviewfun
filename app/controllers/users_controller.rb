@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   # GET /user/neo6120
   # GET /user/neo6120.json
   def show
-    @user = User.where(:id => params[:name])
+    @user = User.where(:id => params[:name]).first()
     @movies = Movie.where(:user_id => params[:id])
 
     respond_to do |format|
