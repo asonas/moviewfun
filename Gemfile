@@ -17,6 +17,15 @@ gem 'libv8', '~> 3.11.8'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'guard-spork'
+  gem 'guard-rspec'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'rb-fsevent'
+  gem 'capybara'
+  gem 'simplecov', require: false
+  gem 'simplecov-rcov', require: false
+  gem 'ci_reporter', require: false
 end
 
 group :development do
